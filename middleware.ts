@@ -5,12 +5,12 @@ export const config = {
 };
 
 export default function middleware(req: Request) {
-  const url = new URL(req.url);
-  const hostname = url.hostname;
+  // const url = new URL(req.url);
+  // const hostname = url.hostname;
 
-  if (hostname.startsWith("suits")) {
-    return rewrite(new URL(`/suits${url.pathname}`, req.url));
-  }
+  // if (hostname.startsWith("suits")) {
+  //   return rewrite(new URL(`/suits${url.pathname}`, req.url));
+  // }
 
   return next();
 }
