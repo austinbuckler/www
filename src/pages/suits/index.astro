@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../../layouts/SuitsLayout.astro';
+import me from '../me.png'
+import devartisthuman from '../devartisthuman.png'
+import msn from '../msn.png'
+---
+
+<Layout title="THIS IS MY COOL NEW WEBSITE">
+	<main>
+		<h1>~/</h1>
+		<!-- If you're reading this, then you should @ me. -->
+		<div class="hero">
+			<Image src={me} alt="Austin B" width="305" height="255" />
+			<Image class="msn" src={msn} alt="canadian maple leaf" />
+			<p>
+<em><u>i build products that leave a lasting impression.</u></em>
+			</p>
+			<p>keeping the web weird.</p>
+		</div>
+		<div class="links">
+			<a
+				href="https://github.com/austinbuckler"
+				rel="noopener noreferrer"
+				target="_blank"
+				class="work" 
+			>
+				<img src="/work.gif" alt="work" width="202" height="110" alt="Work" />
+			</a>
+			<div class="nailz">
+				<Image class="devartisthuman" src={devartisthuman} width="88" height="36" alt="dev, artist, human." />
+			</div>
+		</div>
+	</main>
+	<footer>
+		If this isnt your taste, maybe <a href="https://corpo.austinscoolnew.website">youre on the wrong site.</a>
+		<p>BUILT WITH <a href="https://astro.build" rel="noopener noreferrer" target="_blank">ASTRO</a></p>
+	</footer>
+</Layout>
+
+<style>
+	main {
+		padding: 1rem;
+		margin-top: 3rem;
+		width: 320px;
+	}
+	footer {
+		font-family: monospace;
+	}
+	p {
+		font-family: monospace;
+	}
+	h1 {
+		font-family: monospace;
+	}
+	.hero {
+		position: relative;
+	}
+	.msn {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.work {
+		rotate: 12deg;
+		position: absolute;
+		left: 0;
+		top: 1rem;
+		z-index: 10;
+	}
+	.nailz {
+		position: relative;
+		width: 261px;
+		rotate: -4deg;
+		height: 261px;
+		background-image: url('/nailz.png');
+		mix-blend-mode: hard-light;
+	}
+	.devartisthuman {
+		position: absolute;
+		top: 50%;
+		left: -1rem;
+	}
+	.links {
+		position: relative;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		padding-left: 4rem;
+	}
+</style>
